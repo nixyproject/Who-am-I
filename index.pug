@@ -1,0 +1,9 @@
+mixin recursive(count)
+  if count > 0
+    div.square.black
+      div.square
+        div.square.black
+          +recursive(count - 1)
+
+div.container
+  +recursive(30)

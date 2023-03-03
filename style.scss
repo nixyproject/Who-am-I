@@ -1,0 +1,40 @@
+$containerW: 1000px;
+$containerH: 1000px;
+
+$fillPercent: 96%;
+
+html{
+  background: black;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.container{
+  height: $containerH;
+  width: $containerW;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: (-$containerH/2) 0 0 (-$containerW/2);
+}
+
+.square{
+  height: $fillPercent;
+  width: $fillPercent;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: (-$fillPercent/2) 0 0 (-$fillPercent/2);
+}
+
+.black{ 
+  background: black;  
+  animation: rotate 100s infinite linear; 
+}
+
+@keyframes rotate{
+  0%{ transform: rotate(0deg); }
+	100%{ transform: rotate(360deg); }	
+}
